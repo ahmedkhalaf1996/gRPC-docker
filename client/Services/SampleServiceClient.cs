@@ -11,7 +11,7 @@ namespace client.Services
 
         public SampleServiceClient()
         {
-            _channel = GrpcChannel.ForAddress("https://localhost:5001");
+            _channel = GrpcChannel.ForAddress("http://server:80");
             _client = new Sample.SampleClient(_channel);
         }
 

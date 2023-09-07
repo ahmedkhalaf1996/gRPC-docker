@@ -1,18 +1,12 @@
-    # image: ahmedkhalaf666/grpc-docker-server
-    # image: ahmedkhalaf666/grpc-docker-client
 version: '3'
 services:
   server:
-    build:
-      context: ahmedkhalaf666/grpc-docker-server
-      dockerfile: Dockerfile
+    image: ahmedkhalaf666/grpc-docker-server
     ports:
       - "5001:80"  # Map container port 80 to host port 5001
 
   client:
-    build:
-      context: ahmedkhalaf666/grpc-docker-client
-      dockerfile: Dockerfile
+    image: ahmedkhalaf666/grpc-docker-client
     ports:
       - "5002:80"  # Map container port 80 to host port 5002
     depends_on:
