@@ -11,10 +11,7 @@ namespace client.Services
 
         public SampleServiceClient()
         {
-            _channel = GrpcChannel.ForAddress("server:5001",                                channelOptions: new GrpcChannelOptions()
-                                {
-                                    Credentials = ChannelCredentials.Insecure
-                                });
+            _channel = GrpcChannel.ForAddress("0.0.0.0:5001");
             _client = new Sample.SampleClient(_channel);
         }
 
