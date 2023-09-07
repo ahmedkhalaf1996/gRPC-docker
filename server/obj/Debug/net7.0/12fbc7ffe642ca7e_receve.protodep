@@ -1,0 +1,2 @@
+obj\Debug\net7.0\Protos/Receve.cs \
+obj\Debug\net7.0\Protos/ReceveGrpc.cs: Protos/receve.proto
