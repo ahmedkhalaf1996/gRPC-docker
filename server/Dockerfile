@@ -15,5 +15,5 @@ COPY --from=build /app/out ./
 EXPOSE 5001
 EXPOSE 80
 ENV ASPNETCORE_URLS=http://+
-
+# ENV ASPNETCORE_ENVIRONMENT=Development
 ENTRYPOINT ["dotnet", "server.dll"]
