@@ -4,10 +4,11 @@ services:
     image: ahmedkhalaf666/grpc-docker-server
     ports:
       - "5001:5001"  # Map container port 80 to host port 5001
+      - "8080:8080"
 
   client:
     image: ahmedkhalaf666/grpc-docker-client
     ports:
-      - "5002:80"  # Map container port 80 to host port 5002
+      - "80:80"  # Map container port 80 to host port 5002
     depends_on:
        - server
