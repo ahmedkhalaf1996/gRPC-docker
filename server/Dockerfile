@@ -13,7 +13,7 @@ WORKDIR /app
 COPY --from=build /app/out ./
 
 # Copy the SSL certificate
-COPY server/https/aspnetapp.pfx /https/aspnetapp.pfx
+COPY /https/aspnetapp.pfx /https/aspnetapp.pfx
 ENV ASPNETCORE_HTTPS_PORT=5001
 ENV ASPNETCORE_Kestrel__Certificates__Default__Password="5747723"
 ENV ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
