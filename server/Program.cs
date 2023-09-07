@@ -22,6 +22,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.Listen("0.0.0.0", 5001);
 
 app.MapGrpcService<SampleService>();
 app.MapGrpcReflectionService();
